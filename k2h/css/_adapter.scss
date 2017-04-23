@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+// iphone5
+@media screen and (width: 320px) {
+//  怎么计算网页根元素的字体大小呢？
+//  font-size=屏幕大小/20
+  html{
+    font-size:16px;
+  }
+}
+
+
+// iphone6
+@media screen and (width: 375px) {
+  //  怎么计算网页根元素的字体大小呢？
+  //  font-size=屏幕大小/20
+  html{
+    font-size:18.75px;
+  }
+}

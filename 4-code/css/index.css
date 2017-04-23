@@ -1,0 +1,296 @@
+body{
+  background-color: #f5f5f5;
+}
+.jd{
+  /*在移动端  手机一般都是最大640px  最小 320px*/
+  max-width:640px;
+  min-width:320px;
+  margin: 0 auto;
+}
+
+
+/* 搜索部分 */
+.jd-search{
+  width:100%;
+  height:40px;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 1;
+  
+}
+.jd-search .search{
+  max-width:640px;
+  min-width:320px;
+  margin: 0 auto;
+  height:100%;
+  position: relative;
+  z-index: 1;
+}
+/* logo */
+.jd-search .jd-logo{
+   position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 60px;
+    height: 30px;
+    z-index: 10;
+    background-image: url(../images/sprites.png);
+    background-position: 0px -105px;
+    background-size: 200px 200px;
+}
+/* 搜索框 */
+.jd-search .search-box{
+  width:100%;
+  height:100%;
+  padding-left: 75px;
+  padding-right: 50px;
+  position: relative;
+}
+.jd-search .search-box .icon-search{
+  position: absolute;
+  top:11px;
+  left:80px;;
+  width:30px;
+  height:30px;
+  background-image: url('../images/sprites.png');
+  background-position:-60px -109px;
+  background-size: 200px 200px;
+
+}
+.jd-search .search-box input{
+  width:100%;
+  height:30px;
+  margin-top: 5px;
+  border-radius: 15px;
+  border:1px solid #ccc;
+  padding: 0 30px;
+}
+.jd-search .jd-login{
+  position: absolute;
+  top:10px;
+  right:5px;
+  font-size:16px;
+  color:#fff;
+}
+
+
+
+/* 轮播图 */
+.jd-carousel{
+  width:100%;
+  overflow: hidden;
+  position: relative;
+}
+.jd-carousel ul{
+  width:1000%;
+  overflow: hidden;
+  /* clearfix */
+}
+.jd-carousel ul li{
+  float: left;
+  width:10%;
+}
+.jd-carousel ul a{
+  display: block;
+  width:100%;
+}
+.jd-carousel ul img{
+  width:100%;
+}
+.jd-carousel ol {
+  width:100%;
+  position: absolute;
+  left:0;
+  bottom:2px;
+  /* text-align: center可以让inline 或inline-block元素水平剧中 还可以让文字剧中 */
+  text-align: center;
+  font-size:0;
+
+}
+.jd-carousel ol li{
+  width:8px;
+  height:8px;
+  display: inline-block;
+  border:1px solid #ccc;
+  border-radius: 50%;
+  margin: 2px;
+
+}
+.jd-carousel ol li.now{
+  background-color: #fff;
+}
+
+
+/* 导航 */
+.jd-nav{
+  width:100%;
+  border-bottom:1px solid #ccc;
+  font-size:0;
+  background-color: #fff;
+  padding: 10px 0;
+}
+.jd-nav a{
+  display: inline-block;
+  width:25%;
+  font-size:14px;
+  text-align: center;
+}
+.jd-nav dl{
+  width:100%;
+}
+.jd-nav dt{
+  width:100%;
+  margin-bottom: 10px;
+}
+.jd-nav dt img{
+  width:40px;
+}
+.jd-nav dd{
+  width:100%;
+  margin-bottom: 10px;
+}
+.jd-nav dd p{
+  color:#333; 
+}
+
+/* 掌上秒杀 */
+.jd-seckill{
+  width:100%;
+  margin: 10px auto;
+  padding: 0 5px;
+}
+.jd-seckill .seckill-header{
+  width:100%;
+  height:30px;
+  overflow: hidden;
+  border:1px solid #ccc;
+  border-bottom: none;
+}
+.jd-seckill  .seckill-header .icon-clock{
+  float: left;
+  width:16px;
+  height:20px;
+  margin-top: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-image: url('../images/seckill-icon.png');
+  background-size: 16px 20px;
+}
+.jd-seckill  .seckill-header .text-clock{
+  float: left;
+  font-size:14px;
+  line-height: 30px;
+  color: #f15353;
+  margin-right: 10px;
+}
+.jd-seckill .seckill-header .time-clock{
+  float: left;
+  margin-top: 7px;
+}
+.jd-seckill .seckill-header .time-clock span{
+  display: block;
+  float: left;
+  background-color: #333;
+  color:#fff;
+  width:16px;
+  height:16px;
+  line-height: 16px;
+  text-align: center;
+  margin: 0 2px;
+}
+.jd-seckill .seckill-header .time-clock span:nth-child(3n){
+  background-color: transparent;
+  color:#333;
+  width:2px;
+}
+.jd-seckill .seckill-header .seckill-more{
+  float: right;
+  line-height: 30px;
+  margin-right: 15px;
+  color:#333;
+}
+.jd-seckill .seckill-main{
+  width:100%;
+  border:1px solid #ccc;
+  border-top:none;
+  overflow: hidden;
+  padding: 10px 0;
+}
+.jd-seckill .seckill-main a{
+  display: block;
+  float: left;
+  width:33.33333333%
+} 
+.jd-seckill .seckill-main dl{
+  width:100%;
+}
+.jd-seckill .seckill-main dt{
+  width:100%;
+  text-align: center;
+  border-right:1px solid #ccc;
+}  
+.jd-seckill .seckill-main a:last-child dt{
+  border-right:none;
+}  
+.jd-seckill .seckill-main dt img{
+  width:64%;
+} 
+.jd-seckill .seckill-main dd{
+  width:100%;
+  text-align: center;
+}  
+.jd-seckill .seckill-main dd .new-price{
+  color:#f15353;
+  margin: 10px 0;
+}  
+.jd-seckill .seckill-main dd .old-price{
+  /* 删除线 */
+  text-decoration: line-through;
+  color:#333;
+}  
+
+
+/* 京东超市 */
+.jd-market,.jd-self,.jd-digit{
+  width:100%;
+  padding: 0px 5px;
+  margin: 10px 0px;
+}
+.product{
+  width:100%;
+  border:1px solid #ccc;
+}
+.product .product-header{
+  height:30px;
+  border-bottom: 1px solid #ccc;
+}
+.product .product-header h3{
+  margin-left: 20px;
+  font-size:16px;
+  position: relative;
+}
+.product .product-header h3:before{
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: -10px;
+  width:4px;
+  height:16px;
+  background-color: #f15353;
+}
+.product .product-main img{
+  width:50%;
+}
+.product .product-main img:last-child{
+  border-top:1px solid #ccc;
+}
+.product .product-main .f-left{
+  float: left;
+  border-right:1px solid #ccc;
+}
+.product .product-main .f-right{
+  float: right;
+  border-left:1px solid #ccc;
+
+}

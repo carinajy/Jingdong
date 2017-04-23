@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>轮播图</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .view {
+      overflow: hidden;
+    }
+    
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      position: relative;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    img {
+      width: 100%;
+      /* 清除图片3像素的方案 */
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="view">
+    <ul>
+      <li>
+        <a href="javascript:;"><img src="./images/slide_1.jpg" alt=""></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./images/slide_2.jpg" alt=""></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./images/slide_3.jpg" alt=""></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./images/slide_4.jpg" alt=""></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./images/slide_5.jpg" alt=""></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./images/slide_6.jpg" alt=""></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./images/slide_7.jpg" alt=""></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./images/slide_8.jpg" alt=""></a>
+      </li>
+    </ul>
+  </div>
+</body>
+<script>
+  var wanlum={
+    init:function(){},
+    resize:function(){}
+  }
+  // 1.获取view这个div
+  var oView = document.querySelector('.view');
+  var oUl = document.querySelector('.view ul');
+  // 设置变量
+  var width, size, aLi, timer, index = 0, startX, startY, endX, endY;
+  // 获取第一个 和最后一个li
+  var firstChild = document.querySelector('.view ul li:first-child');
+  var lastChild = document.querySelector('.view ul li:last-child');
+
+  function init() {
+    // 把第一个添加到最后 把最后一个添加到最前
+    oUl.appendChild(firstChild.cloneNode(true));
+    oUl.insertBefore(lastChild.cloneNode(true), firstChild);
+    aLi = document.querySelectorAll('.view ul li');
+    // ali的长度
+    size = aLi.length;
+    setWidth();
+
+    autoPlay();
+    index--;
+    oUl.style.left = width * index + 'px';
+  }
+  init();
+
+  function setWidth() {
+    width = oView.clientWidth;
+    // ul的宽度
+    oUl.style.width = size * width + 'px';
+    for (var i = 0; i < size; i++) {
+      aLi[i].style.width = width + 'px';
+    }
+  }
+  window.addEventListener('resize', function () {
+    init();
+  })
+  function autoPlay() {
+    timer = setInterval(function () {
+      index--;
+      oUl.style.transition = 'all 0.5s';
+      oUl.style.left = index * width + 'px';
+    }, 1500)
+  }
+  oUl.addEventListener('webkitTransitionEnd', function () {
+    console.log(index);
+    if (index == 1 - size) {
+      index = -1;
+
+    }
+    if (index == 0) {
+      index = 2 - size;
+
+    }
+    oUl.style.transition = '';
+    oUl.style.left = index * width + 'px';
+  })
+
+  // touch事件
+  oUl.addEventListener('touchstart', function (ev) {
+    // 清除定时器
+    clearInterval(timer);
+    var touches = ev.targetTouches[0];
+    startX = touches.clientX;
+    startY = touches.clientY;
+  })
+
+  oUl.addEventListener('touchend', function (ev) {
+    var touches = ev.changedTouches[0];
+    endX = touches.clientX;
+    endY = touches.clientY;
+
+    if (endX - startX > 0) {
+      // console.log('向右');
+      index++;
+
+    } else {
+      index--;
+      // console.log('向左');
+    }
+    oUl.style.left = index * width + 'px';
+    oUl.style.transition = 'all 0.5s';
+  })
+
+</script>
+
+</html>

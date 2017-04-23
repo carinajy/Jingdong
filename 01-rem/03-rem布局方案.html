@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 设计图中的宽度 640  中间有一个div 16px */
+    @media screen and (width:320px){
+      /* 得到html的字体大小 屏幕的宽度/20 */
+      html{
+        font-size: 16px;
+      }
+    }
+
+     @media screen and (width:360px){
+      /* 得到html的字体大小 屏幕的宽度/20 */
+      html{
+        font-size: 18px;
+      }
+    }
+    .box{
+      /*width: 16/32*rem*/
+      width:0.5rem;
+      height:0.5rem;
+      background-color: red;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

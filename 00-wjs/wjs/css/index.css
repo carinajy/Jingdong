@@ -1,0 +1,423 @@
+/* 公用部分 */
+i{
+  font-style:normal;
+}
+/* 头部部分 */
+.wjs-header{
+  border-bottom: 1px solid #ccc;
+}
+.wjs-header .wjs-header-row{
+  height:40px;
+}
+.wjs-header .wjs-header-row .col{
+  height:100%;
+  border-right:1px solid #ccc;
+  line-height:40px;
+  text-align: center;
+}
+.wjs-header .wjs-header-row .col:last-child{
+  border-right:none;
+}
+.wjs-header .wjs-header-row  a{
+  text-decoration: none;
+  color:#333;
+  position: relative;
+}
+.wjs-header  .col img{
+  display: none;
+  position: absolute;
+  top:27px;
+  left:-10px;
+  border:1px solid #ccc;
+  z-index: 1;
+}
+.wjs-header .wjs-header-row  a:hover img{
+  display: block;
+  border-top:1px solid #fff;
+}
+.wjs-header  .btn-register{
+  background-color: #e92322;
+  padding: 2px 9px;
+  border:1px solid #e92322;
+}
+.wjs-header .btn-register:focus,.wjs-header .btn-login:focus{
+  outline: none;
+}
+.wjs-header  .btn-login{
+  color:#333;
+  text-decoration: none;
+}
+
+
+/* 导航部分 */
+#myAffix{
+  width:100%;
+  background-color: #fff;
+  z-index: 100;
+  top:0;
+}
+.wjs-nav{
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  margin-bottom:0px;
+}
+.wjs-nav .navbar-brand{
+  height:80px;
+  font-size:25px;
+  line-height:80px;
+  padding-top:0;
+  padding-bottom:0;
+}
+.wjs-nav .navbar-brand .mifei-logo{
+  color:#e92322;
+}
+.wjs-nav .navbar-brand .mifei-word{
+  color:#000;
+}
+.wjs-nav .navbar-nav li{
+  height:80px;
+  line-height: 80px;
+}
+.wjs-nav .navbar-nav li a{
+  height:100%;
+  line-height: 80px;
+  padding-top:0;
+  padding-bottom:0;
+}
+
+.wjs-nav.navbar-default .navbar-nav > .active > a, .wjs-nav.navbar-default .navbar-nav > .active > a:hover,.wjs-nav.navbar-default .navbar-nav > .active > a:focus {
+    /*color: #555;
+    background-color: #e7e7e7;*/
+    box-sizing: border-box;
+    color:#333;
+    background-color: transparent;
+    border-bottom:3px solid  #e92322;
+}
+.wjs-nav.navbar-default .navbar-nav > li > a:hover, .wjs-nav.navbar-default .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: transparent;
+    border-bottom:3px solid  #e92322;
+}
+.wjs-nav.navbar-default .navbar-toggle{
+  margin-top: 23px;
+}
+
+
+/* 轮播图部分 */
+.wjs-carousel{
+
+}
+.wjs-carousel .pc-carousel{
+      display: block;
+      height:410px;
+      background-position: center center;
+      background-size: cover;
+}
+.wjs-carousel .mobile-carousel img{
+    width: 100%;
+}
+
+
+/* 服务部分 */
+.wjs-service{
+  padding: 20px 0;
+  border-bottom:1px solid #ccc;
+}
+
+.wjs-service .media-group{
+  display: block;
+  padding: 20px 0;
+  text-decoration: none;
+  color:#333;
+}
+
+.wjs-service .media-group:hover{
+  color:#e92322;
+}
+.wjs-service .media-group .mifei-info{
+  font-size:25px;
+  line-height: 54px;
+  position: relative;
+  top:-8px;
+}
+
+/* 预约部分 */
+.wjs-book{
+  border-bottom:1px solid #ccc;
+  padding:20px 0;
+}
+/* 如果文字是一行显示的 可以另外一种解决 强制不换行  如果显示不了  省略文字  出现省略号 http://www.daqianduan.com/6179.html */
+.wjs-book  .book-left,.wjs-book  .book-right{
+  height:100%;
+  /*line-height: 96px;*/
+  font-size:14px;
+}
+.wjs-book  .book-left .mifei-clock,.wjs-book  .book-right .mifei-video{
+  font-size:20px;
+}
+
+
+/* 产品部分 */
+.wjs-product{
+  padding-top:50px;
+  background-color: #f5f5f5;
+}
+
+.wjs-product .nav-tabs > li.active > a,.wjs-product .nav-tabs > li.active > a:hover,.wjs-product .nav-tabs > li.active > a:focus{
+  border:none;
+}
+.wjs-product .nav-tabs > li.active > a,.wjs-product .nav-tabs > li.active > a:hover,.wjs-product .nav-tabs > li.active > a:focus {
+    color: #333;
+    cursor: default;
+    background-color: transparent;
+    border-bottom: 3px solid #e92322;
+}
+.wjs-product .nav-tabs > li > a {
+    color:#333;
+}
+.wjs-product .nav-tabs > li > a:hover {
+    color:#e92322;
+}
+.wjs-product .nav-tabs{
+  overflow: hidden;
+}
+
+.wjs-product .product{
+  height:150px;
+  box-shadow: 2px 2px 4px #ccc;
+  margin: 10px 0;
+  background-color: #fff;
+  position: relative;
+}
+.wjs-product .active.product{
+  background-color: #e92322;
+}
+.wjs-product .product .product-right{
+  float: right;
+  width:100px;
+  height:100%;
+  border-left:1px dashed #ccc;
+  text-align: center;
+  position: relative;
+}
+.wjs-product .product .product-right:before{
+  position: absolute;
+  top:-6px;
+  left:-6px;
+  content:'';
+  width:12px;
+  height:12px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 -2px 2px #d8d8d8 inset;
+}
+.wjs-product .product .product-right:after{
+  position: absolute;
+  bottom:-6px;
+  left:-6px;
+  content:'';
+  width:12px;
+  height:12px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 2px #d8d8d8 inset;
+}
+.wjs-product .active.product .product-right p{
+  margin: 20px 0;
+  font-size:44px;
+}
+.wjs-product .active.product {
+  color: #fff;
+}
+.wjs-product .product {
+  color: #333;
+}
+.wjs-product .product .product-right p sub{
+  font-size:12px;
+}
+.wjs-product .product .product-right p:last-child {
+  font-size:14px;
+}
+.wjs-product .product .product-left{
+  overflow: hidden;
+}
+.wjs-product .product .product-left h3{
+  margin: 10px 0;
+  font-size:16px;
+
+}
+.wjs-product .product .product-left p{
+  font-size:12px;
+}
+.wjs-product .product .mifei-partner10{
+  position: absolute;
+  top:-7px;
+  left:0;
+  /*color:#e92322;*/
+  font-size:33px;
+  display: none;
+}
+
+.wjs-product .active.product .mifei-partner10{
+  display: block;
+}
+.wjs-product .active.product  .product-right p{
+ color:#fff;}
+ .wjs-product .active.product  .product-right .icon{
+  display: none;
+}
+ .wjs-product .product  .product-right .icon{
+  display:block;
+}
+.wjs-product .product  .product-right .icon span{
+  display: inline-block;
+  font-size:12px;
+  width:14px;
+  height:14px;
+  border:1px solid #e92322;
+  line-height:12px;
+  text-align: center;
+  margin-right: 5px;
+}
+.wjs-product .product  .product-right .icon{
+  margin: 5px 0;
+  margin-bottom: 0;
+  font-size:0;
+}
+.wjs-product .product  .product-right p{
+  margin: 5px 0;
+  font-size:44px;
+}
+.wjs-product .product  .product-right .icon  .gan{
+   border:1px solid green;
+   color:green;
+}
+
+.wjs-product .product  .product-right p{
+  color:#e92322;
+}
+/* 新闻 */
+.wjs-news{
+  background-color: #fff;
+  padding:50px 0;
+  border:1px solid #ccc;
+}
+.wjs-news .nav-tabs{
+  border-bottom:none;
+}
+.wjs-news .wjs-title{
+  height:50px;
+  line-height:50px;
+  text-align: center;
+  font-size:20px;
+  color:#333;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.wjs-news .wjs-title:before{
+  content:'';
+  position: absolute;
+  bottom:-3px;
+  right:-6px;
+  width:6px;
+  height:6px;
+  border-radius: 50%;
+  border:1px solid #ccc;
+
+}
+.wjs-news .nav-tabs > li.active > a,
+.wjs-news .nav-tabs > li.active > a:hover,
+.wjs-news .nav-tabs > li.active > a:focus{
+  background-color: #e92322;
+  border:none;
+}
+.wjs-news .nav-tabs li:hover a{
+  background-color: #e92322;
+}
+.wjs-news .nav-tabs a{
+  width:60px;
+  height:60px;
+  padding:0;
+  margin:0px;
+  line-height:60px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-bottom: 60px;
+}
+.wjs-news .nav-tabs a:before{
+  content:'';
+  position: absolute;
+  bottom:-60px;
+  left:50%;
+  width:1px;
+  height:60px;
+  border-left: 1px dashed #ccc;
+}
+.wjs-news .nav-tabs li:last-child a:before{
+  height:0;
+}
+.wjs-news .nav-tabs i{
+  color:#fff;
+  font-size:30px;
+}
+.wjs-news .tab-content ul{
+  margin:0;
+  padding:0;
+  list-style: none;
+  margin-left: 30px;
+}
+.wjs-news .tab-content li{
+  height:50px;
+  line-height: 50px;
+}
+.wjs-news .tab-content a{
+ color:#333;
+ text-decoration: none;
+}
+@media only screen and (min-width:768px) and (max-width:992px){
+  .wjs-news .nav-tabs a{
+    margin:30px 50px;
+  }
+  .wjs-news .nav-tabs li a:before{
+  height:0;
+}
+}
+
+@media only screen and (max-width:768px){
+  .wjs-news .nav-tabs li{
+    width:25%;
+  }
+  .wjs-news .nav-tabs a{
+    margin: 30px 0px;
+  }
+  .wjs-news .nav-tabs li a:before{
+  height:0;
+}
+}
+
+/* 合作伙伴 */
+.company{
+  text-align: center;
+}
+.company ul{
+  list-style: none;
+  padding:0;
+  margin:0;
+  font-size:0;
+  text-align: center;
+}
+.company ul  a{
+  text-decoration: none;
+}
+.company ul li{
+display: inline-block;
+padding:0px 10px;
+}
+.company i{
+  font-size:80px;
+  color:#333;
+}
+.company li:hover i{
+  color:#e92322;
+}

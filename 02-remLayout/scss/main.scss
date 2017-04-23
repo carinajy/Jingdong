@@ -1,0 +1,14 @@
+@charset 'UTF-8';
+
+// 引入 变量设置表
+@import '_variablie.scss';
+// 引入 默认样式清除表
+@import '_normalize.scss';
+// 引入 项目默认样式表
+@import '_base.scss';
+// 引入 适配屏幕表
+@import '_adapter.scss';
+// 引入字体图标库
+@import '_fonts.scss';
+// 首页样式
+@import '_index.scss';

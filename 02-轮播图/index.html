@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .view {
+      overflow: hidden;
+    }
+    
+    .view ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+    
+    .view li {
+      float: left;
+    }
+    
+    ;
+    a {
+      display: block;
+    }
+    
+    .view img {
+      width: 100%;
+      vertical-align: middle;
+    }
+    
+    ;
+  </style>
+</head>
+
+<body>
+  <div class="view">
+    <ul>
+      <li>
+        <a href="javascript:;"><img src="./images/slide_1.jpg" alt=""></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./images/slide_2.jpg" alt=""></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./images/slide_3.jpg" alt=""></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./images/slide_4.jpg" alt=""></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./images/slide_5.jpg" alt=""></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./images/slide_6.jpg" alt=""></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./images/slide_7.jpg" alt=""></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./images/slide_8.jpg" alt=""></a>
+      </li>
+    </ul>
+  </div>
+  <script>
+    // 1.当页面载入的时候 在第一个元素前面添加最后一个元素 在最后一个元素后添加第一个元素
+    var oView = document.querySelector('.view');
+    var oUl = document.querySelector('.view ul');
+
+    // 定义变量
+    var oViewWidth, size, aLi, timer, index = 0, startX, startY, endX, endY;
+    // 获取第一个和最后一个元素
+
+    var firestChild = document.querySelector('.view li:first-child');
+    var lastChild = document.querySelector('.view li:last-child');
+    function init() {
+      oUl.appendChild(firestChild.cloneNode(true));
+      oUl.insertBefore(lastChild.cloneNode(true), firestChild);
+      aLi = document.querySelectorAll('.view li');
+      // 获取所有li元素
+      size = aLi.length;
+      console.log(size);
+      setWidth();
+
+      autoPlay();
+      index--;
+      oUl.style.left = index * oViewWidth + 'px';
+
+    };
+    init();
+    function setWidth() {
+      // 获取饰扣的宽度
+      oViewWidth = oView.clientWidth;
+      oUl.style.width = oViewWidth * size + 'px';
+      for (var i = 0; i < size; i++) {
+        aLi[i].style.width = oViewWidth + 'px';
+      }
+    };
+    window.addEventListener('resize', function () {
+      setWidth();
+    })
+    function autoPlay() {
+      timer = setInterval(function () {
+        index--;
+        oUl.style.transition = 'all 0.2s';
+        oUl.style.left = index * oViewWidth + 'px';
+      }, 1500)
+    }
+    oUl.addEventListener('webkitTransitionEnd', function () {
+      console.log(index);
+      if (index == 1 - size) {
+        index = -1;
+      }
+      if (index == 0) {
+        index = 2 - size;
+      }
+      oUl.style.transition = '';
+      oUl.style.left = oViewWidth * index + 'px';
+    })
+    oUl.addEventListener('touchstart', function (ev) {
+      clearInterval(timer);
+      var touches = ev.targetTouches[0];
+      startX = touches.clientX;
+      startY = touches.clientY;
+    })
+    oUl.addEventListener('touchend', function (ev) {
+      autoPlay();
+      var touches = ev.changedTouches[0];
+      endX = touches.clientX;
+      endY = touches.clientY;
+      if (endX > startX) {
+        console.log('right');
+        index++;
+      } else {
+        console.log('left');
+        index--;
+      }
+      oUl.style.transition = 'left 0.5s';
+      oUl.style.left = oViewWidth * index + 'px';
+    })
+  </script>
+</body>
+
+</html>

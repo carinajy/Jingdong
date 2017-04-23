@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'itcast';
+  src:
+    url('fonts/itcast.ttf?m8yg8p') format('truetype'),
+    url('fonts/itcast.woff?m8yg8p') format('woff'),
+    url('fonts/itcast.svg?m8yg8p#itcast') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'itcast' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add:before {
+  content: "\e900";
+}
+.icon-cancle:before {
+  content: "\e901";
+}
+.icon-delete:before {
+  content: "\e902";
+}
+.icon-edit:before {
+  content: "\e903";
+}
+.icon-preview:before {
+  content: "\e904";
+}
+.icon-share:before {
+  content: "\e905";
+}
+.icon-time:before {
+  content: "\e906";
+}
+

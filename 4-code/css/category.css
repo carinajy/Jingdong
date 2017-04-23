@@ -1,0 +1,144 @@
+html,body{
+  width:100%;
+  height:100%;
+}
+body{
+  /* 屏幕最小就是320px */
+  min-width:320px;
+}
+.category{
+  width:100%;
+  height:100%;
+}
+.category .category-search{
+  width:100%;
+  height:40px;
+  background-image: url('../images/header-bg.png');
+  background-size: auto 40px;
+  background-repeat: repeat-x;
+  position: absolute;
+  border-bottom:1px solid #ccc;
+}
+/* 返回按钮 */
+.category .category-search .icon-back{
+  position: absolute;
+  top:5px;
+  left:13px;
+  width: 34px;
+  padding: 0 6px;
+  height:30px;
+  background-image: url('../images/sprites.png');
+  background-size: 200px 200px;
+  background-position:-14px 5px;
+  background-clip: content-box;
+}
+
+/* 搜索框 */
+.category .category-search .search-box{
+  width:100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  height:100%;
+}
+.category  .search-box input{
+  width:100%;
+  height:30px;
+  border:1px solid #CCC;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+/* 返回按钮 */
+.category .category-search .icon-menu{
+     position: absolute;
+    top: 10px;
+    right: 9px;
+    width: 34px;
+    padding: 0 6px;
+    height: 30px;
+    background-image: url(../images/sprites.png);
+    background-size: 200px 200px;
+    background-position: -54px 0;
+    background-clip: content-box;
+}
+
+/* 主要区域 */
+.category .category-main{
+  width:100%;
+  height:100%;
+  padding-top: 40px;
+}
+.category .category-main .category-menu{
+  width:90px;
+  /* 两栏布局 左边固定 右边自适应 */
+  float: left;
+  height:100%;
+  overflow: hidden;
+}
+.category  .category-menu ul{
+  width:100%;
+  height:100%;
+}
+.category  .category-menu li{
+width:100%;
+height:50px;
+background-color: #f7f7f7;
+border-right:1px solid #ccc;
+border-bottom:1px solid #ccc;
+ 
+}
+.category  .category-menu li.now{
+  border-right:none;
+  background-color: #fff;
+}
+.category  .category-menu li.now a{
+   color:#f15353;
+}
+.category  .category-menu a{
+  display: block;
+  width:100%;
+  height:100%;
+  text-align: center;
+  line-height: 50px;
+  color:#333;
+}
+.category .category-main .category-content{
+  height:100%;
+  overflow: hidden;
+  /*overflow-y: scroll;*/
+}
+.category  .category-content .ad{
+  display: block;
+  width:100%;
+  padding: 10px;
+}
+.category  .category-content .ad img{
+  width:100%;
+}
+.product-show{
+   width:100%;
+  padding: 10px;
+}
+.product-show h3{
+  font-weight: 700;
+}
+.product-show-content{
+  width:100%;
+  overflow: hidden;
+
+}
+.product-show-content a{
+  float: left;
+  display: block;
+  width:33.3333333%;
+  text-align: center;
+  color:#333;
+  font-size:12px;
+}
+.product-show-content img{
+  width:60px;
+  height:60px;
+}
+.product-show-content dd p{
+  margin: 5px 0;
+}

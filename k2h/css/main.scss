@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+// 这是项目的配置文件
+@import "setting";
+/* 浏览器默认样式清除 */
+@import "normalize";
+@import "fonts";
+@import "base";
+@import "adapter";
+@import "mixin";
+@import "index";

@@ -1,0 +1,78 @@
+/*自定义字体*/
+@font-face {
+    font-family: 'mifei';
+    src: url('../fonts/MiFie-Web-Font.eot') format('embedded-opentype'),
+    url('../fonts/MiFie-Web-Font.svg') format('svg'),
+    url('../fonts/MiFie-Web-Font.ttf') format('truetype'),
+    url('../fonts/MiFie-Web-Font.woff') format('woff');
+}
+/*定义字体类*/
+.mifei{
+    font-family: 'mifei';
+}
+/*定义具体的图标*/
+.mifei-phone::before{
+    content: "\e908";
+}
+.mifei-tel::before{
+    content: "\e909";
+}
+.mifei-logo::before{
+    content: "\e920";
+}
+.mifei-word::before{
+    content: "\e93e";
+}
+.mifei-info::before{
+    content: "\e903";
+}
+.mifei-clock::before{
+    content: "\e906";
+}
+.mifei-video::before{
+    content: "\e905";
+}
+.mifei-news1::before{
+    content: "\e90e";
+}
+.mifei-news2::before{
+    content: "\e90f";
+}
+.mifei-news3::before{
+    content: "\e910";
+}
+.mifei-news4::before{
+    content: "\e911";
+}
+
+.mifei-partner1::before{
+    content:"\e946";
+}
+.mifei-partner2::before{
+    content: "\e92f";
+}
+.mifei-partner3::before{
+    content: "\e92e";
+}
+.mifei-partner4::before{
+    content: "\e92a";
+}
+.mifei-partner5::before{
+    content: "\e929";
+}
+.mifei-partner6::before{
+    content: "\e931";
+}
+.mifei-partner7::before{
+    content: "\e92c";
+}
+.mifei-partner8::before{
+    content: "\e92b";
+}
+.mifei-partner9::before{
+    content: "\e92d";
+}
+.mifei-partner10::before{
+    content: "\e915";
+}
+
